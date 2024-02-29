@@ -3,12 +3,12 @@ const cors = require("cors");
 
 const app = express();
 
-const budgetController = require("./controllers/budget.controller");
+const transactionController = require("./controllers/transaction.controller");
 
 //Middleware
 app.use(cors());
 app.use(express.json());
-app.use("/budget", budgetController);
+app.use("/transactions", transactionController);
 
 app.get("/", (req, res) => {
   res.send("Welcome to Budgetr!");

@@ -6,7 +6,7 @@ module.exports = [
     date: "02-28-2024",
     from: "Local Market",
     category: "Food",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ module.exports = [
     date: "02-27-2024",
     from: "Gas Station",
     category: "Transportation",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ module.exports = [
     date: "02-25-2024",
     from: "Employer",
     category: "Income",
-    transactionType: "deposit",
+    transactionType: "Deposit",
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ module.exports = [
     date: "02-24-2024",
     from: "Fine Dining Restaurant",
     category: "Food",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ module.exports = [
     date: "02-23-2024",
     from: "Bank",
     category: "Savings",
-    transactionType: "deposit",
+    transactionType: "Deposit",
   },
   {
     id: 6,
@@ -51,7 +51,7 @@ module.exports = [
     date: "02-22-2024",
     from: "Pet Store",
     category: "Pets",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 7,
@@ -60,7 +60,7 @@ module.exports = [
     date: "02-21-2024",
     from: "Cinema",
     category: "Entertainment",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 8,
@@ -69,7 +69,7 @@ module.exports = [
     date: "02-20-2024",
     from: "Utility Company",
     category: "Utilities",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 9,
@@ -78,7 +78,7 @@ module.exports = [
     date: "02-19-2024",
     from: "Internet Provider",
     category: "Utilities",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 10,
@@ -87,7 +87,7 @@ module.exports = [
     date: "02-18-2024",
     from: "Bookstore",
     category: "Education",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 11,
@@ -96,7 +96,7 @@ module.exports = [
     date: "02-17-2024",
     from: "Telecom Company",
     category: "Utilities",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 12,
@@ -105,7 +105,7 @@ module.exports = [
     date: "02-16-2024",
     from: "Fitness Center",
     category: "Health",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 13,
@@ -114,7 +114,7 @@ module.exports = [
     date: "02-15-2024",
     from: "Retail Store",
     category: "Personal",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 14,
@@ -123,7 +123,7 @@ module.exports = [
     date: "02-14-2024",
     from: "Insurance Company",
     category: "Insurance",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 15,
@@ -132,7 +132,7 @@ module.exports = [
     date: "02-13-2024",
     from: "Travel Agency",
     category: "Travel",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 16,
@@ -141,7 +141,7 @@ module.exports = [
     date: "02-12-2024",
     from: "Gift Shop",
     category: "Gifts",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 17,
@@ -150,7 +150,7 @@ module.exports = [
     date: "02-11-2024",
     from: "Contractor",
     category: "Home",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 18,
@@ -159,7 +159,7 @@ module.exports = [
     date: "02-10-2024",
     from: "Café",
     category: "Food",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 19,
@@ -168,7 +168,7 @@ module.exports = [
     date: "02-09-2024",
     from: "Pharmacy",
     category: "Health",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 20,
@@ -177,7 +177,7 @@ module.exports = [
     date: "02-08-2024",
     from: "Electronics Store",
     category: "Electronics",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 21,
@@ -186,7 +186,7 @@ module.exports = [
     date: "02-07-2024",
     from: "Charity Organization",
     category: "Charity",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 22,
@@ -195,7 +195,7 @@ module.exports = [
     date: "02-06-2024",
     from: "Auto Repair Shop",
     category: "Transportation",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 23,
@@ -204,7 +204,7 @@ module.exports = [
     date: "02-05-2024",
     from: "Barber Shop",
     category: "Personal",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 24,
@@ -213,7 +213,7 @@ module.exports = [
     date: "02-04-2024",
     from: "Publisher",
     category: "Entertainment",
-    transactionType: "dwithdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 25,
@@ -222,7 +222,7 @@ module.exports = [
     date: "02-03-2024",
     from: "Stationery Store",
     category: "Education",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 26,
@@ -231,7 +231,7 @@ module.exports = [
     date: "02-02-2024",
     from: "Public Transportation",
     category: "Transportation",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 27,
@@ -240,7 +240,7 @@ module.exports = [
     date: "02-01-2024",
     from: "Dental Clinic",
     category: "Health",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 28,
@@ -249,7 +249,7 @@ module.exports = [
     date: "01-31-2024",
     from: "Streaming Service",
     category: "Entertainment",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 29,
@@ -258,7 +258,7 @@ module.exports = [
     date: "01-30-2024",
     from: "Internet Service Provider",
     category: "Utilities",
-    transactionType: "withdrawal",
+    transactionType: "Withdrawal",
   },
   {
     id: 30,
@@ -267,6 +267,6 @@ module.exports = [
     date: "01-29-2024",
     from: "Investment Firm",
     category: "Investment",
-    transactionType: "deposit",
+    transactionType: "Deposit",
   },
 ];
