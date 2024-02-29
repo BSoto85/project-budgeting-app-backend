@@ -12,7 +12,9 @@ const validateForm = (req, res, next) => {
     !res.body.from ||
     typeof req.body.from !== "string" ||
     !res.body.category ||
-    typeof req.body.category !== "string"
+    typeof req.body.category !== "string" ||
+    !res.body.transactionType ||
+    typeof req.body.transactionType !== "string"
   )
     res.status(400).json({ message: "Invalid inputs" });
   else next();
@@ -34,7 +36,7 @@ transactions.get("/:id", (req, res) => {
   } else res.json({ message: "Transaction not found" });
 });
 
-transactions.post("/", validateForm, (req, res) => {
+transactions.post("/", (req, res) => {
   const idForNewTransaction =
     transactionArray[transactionArray.length - 1].id + 1;
   req.body.id = idForNewTransaction;
