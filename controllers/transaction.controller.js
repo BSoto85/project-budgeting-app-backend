@@ -3,17 +3,16 @@ const transactions = express.Router();
 
 const validateForm = (req, res, next) => {
   if (
-    !req.body.item_name ||
-    typeof req.body.item_name !== "string" ||
-    !req.body.amount ||
-    typeof req.body.amount !== "number" ||
+    !req.body.itemName ||
+    typeof req.body.itemName !== "string" ||
+    req.body.amount === 0 ||
     !req.body.date ||
     typeof req.body.date !== "string" ||
-    !res.body.from ||
+    !req.body.from ||
     typeof req.body.from !== "string" ||
-    !res.body.category ||
+    !req.body.category ||
     typeof req.body.category !== "string" ||
-    !res.body.transactionType ||
+    !req.body.transactionType ||
     typeof req.body.transactionType !== "string"
   )
     res.status(400).json({ message: "Invalid inputs" });
