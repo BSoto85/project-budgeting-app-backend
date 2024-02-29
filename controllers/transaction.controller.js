@@ -40,6 +40,7 @@ transactions.post("/", (req, res) => {
   const idForNewTransaction =
     transactionArray[transactionArray.length - 1].id + 1;
   req.body.id = idForNewTransaction;
+  req.body.amount = +req.body.amount;
   transactionArray.push(req.body);
   res.json({ transactions: transactionArray });
 });
@@ -50,6 +51,7 @@ transactions.put("/:id", (req, res) => {
     (transaction) => transaction.id === +id
   );
   if (transactionIndex > -1) {
+    req.body.amount = +req.body.amount;
     transactionArray[transactionIndex] = req.body;
     res.json({ transactions: transactionArray });
   } else res.json({ message: "Transaction not found" });
