@@ -32,6 +32,9 @@ const formattedWords = (input) => {
 let transactionArray = require("../models/transaction.model");
 
 transactions.get("/", (req, res) => {
+  if (!transactionArray) {
+    res.status(500).json({ error: "Data not found" });
+  }
   res.json({ transactions: transactionArray });
 });
 
@@ -57,7 +60,7 @@ transactions.post("/", validateForm, (req, res) => {
   const sortedtransactionArray = [...transactionArray].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
-  res.json({ transactions: sortedtransactionArray });
+  res.status(200).json({ transactions: sortedtransactionArray });
 });
 
 transactions.put("/:id", validateForm, (req, res) => {
@@ -72,7 +75,7 @@ transactions.put("/:id", validateForm, (req, res) => {
     req.body.category = formattedWords(req.body.category);
     transactionArray[transactionIndex] = req.body;
     res.json({ transactions: transactionArray });
-  } else res.json({ message: "Transaction not found" });
+  } else res.status(400).json({ message: "Transaction not found" });
 });
 
 transactions.delete("/:id", (req, res) => {
@@ -82,7 +85,7 @@ transactions.delete("/:id", (req, res) => {
   );
   if (transactionArray) {
     res.json({ transactions: transactionArray });
-  } else res.json({ message: "Budget not found" });
+  } else res.status(400).json({ message: "Budget not found" });
 });
 
 module.exports = transactions;

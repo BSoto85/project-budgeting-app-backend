@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.json({ error: "Page not found" });
+  res.status(400).json({ error: "Page not found" });
 });
 
 module.exports = app;
