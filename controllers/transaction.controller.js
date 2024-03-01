@@ -35,7 +35,7 @@ transactions.get("/", (req, res) => {
   if (!transactionArray) {
     res.status(500).json({ error: "Data not found" });
   }
-  res.json({ transactions: transactionArray });
+  res.status(200).json({ transactions: transactionArray });
 });
 
 transactions.get("/:id", (req, res) => {
@@ -44,7 +44,7 @@ transactions.get("/:id", (req, res) => {
     (transaction) => transaction.id === +id
   );
   if (selectedTransaction) {
-    res.json({ transaction: selectedTransaction });
+    res.status(200).json({ transaction: selectedTransaction });
   } else res.json({ message: "Transaction not found" });
 });
 
@@ -57,10 +57,10 @@ transactions.post("/", validateForm, (req, res) => {
   req.body.from = formattedWords(req.body.from);
   req.body.category = formattedWords(req.body.category);
   transactionArray.push(req.body);
-  const sortedtransactionArray = [...transactionArray].sort(
+  const sortedTransactionArray = [...transactionArray].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
-  res.status(200).json({ transactions: sortedtransactionArray });
+  res.status(200).json({ transactions: sortedTransactionArray });
 });
 
 transactions.put("/:id", validateForm, (req, res) => {
@@ -74,7 +74,10 @@ transactions.put("/:id", validateForm, (req, res) => {
     req.body.from = formattedWords(req.body.from);
     req.body.category = formattedWords(req.body.category);
     transactionArray[transactionIndex] = req.body;
-    res.json({ transactions: transactionArray });
+    const sortedTransactionArray = [...transactionArray].sort(
+      (a, b) => new Date(b.date) - new Date(a.date)
+    );
+    res.status(200).json({ transactions: sortedTransactionArray });
   } else res.status(400).json({ message: "Transaction not found" });
 });
 
