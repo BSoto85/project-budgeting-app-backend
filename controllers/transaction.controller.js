@@ -18,6 +18,16 @@ const validateForm = (req, res, next) => {
     res.status(400).json({ message: "Invalid inputs" });
   else next();
 };
+const formattedWords = (input) => {
+  return input
+    .split(" ")
+    .map((word) => {
+      const firstLetter = word.slice(0, 1).toUpperCase();
+      const restOfWord = word.slice(1).toLowerCase();
+      return firstLetter + restOfWord;
+    })
+    .join(" ");
+};
 
 let transactionArray = require("../models/transaction.model");
 
@@ -40,8 +50,14 @@ transactions.post("/", validateForm, (req, res) => {
     transactionArray[transactionArray.length - 1].id + 1;
   req.body.id = idForNewTransaction;
   req.body.amount = +req.body.amount;
+  req.body.itemName = formattedWords(req.body.itemName);
+  req.body.from = formattedWords(req.body.from);
+  req.body.category = formattedWords(req.body.category);
   transactionArray.push(req.body);
-  res.json({ transactions: transactionArray });
+  const sortedtransactionArray = [...transactionArray].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+  res.json({ transactions: sortedtransactionArray });
 });
 
 transactions.put("/:id", validateForm, (req, res) => {
@@ -51,6 +67,9 @@ transactions.put("/:id", validateForm, (req, res) => {
   );
   if (transactionIndex > -1) {
     req.body.amount = +req.body.amount;
+    req.body.itemName = formattedWords(req.body.itemName);
+    req.body.from = formattedWords(req.body.from);
+    req.body.category = formattedWords(req.body.category);
     transactionArray[transactionIndex] = req.body;
     res.json({ transactions: transactionArray });
   } else res.json({ message: "Transaction not found" });
