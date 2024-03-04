@@ -53,4 +53,10 @@ The **Budgetr App** was created using Express and React. This app was developed 
 - Transactions are sorted in descending order by date.
 - The date shows in a human-readable format.
 - Grid in home view changes from 3 columns on wider views, to 2 columns, and then to 1 column for mobile views.
-- A helper.js file was ued to hold helper functions.
+- A helper.js file was used to hold helper functions.
+- When deleting a transaction, you are asked if you're sure you want to delete. Click **cancel** to cancel delting the transaction, or click **ok** to move forward with deletion.
+- Frontend and Backend deployed.
+
+## Link to Live Site
+
+[Budgetr](https://superlative-quokka-f55988.netlify.app/)
